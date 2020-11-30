@@ -11,7 +11,7 @@ use Auth;
 class MainController extends Controller
 {
     public function index(Request $request){
-        $productsQuery = Product::query();
+        $productsQuery = Product::query()->latest();
 
         if($request->filled('price_from')){
             $productsQuery->where('price','>=',$request->price_from);
@@ -22,7 +22,8 @@ class MainController extends Controller
         }
 
         $products = $productsQuery->paginate(6);
-        return view('index',['products'=>$products]);
+        $product = Product::count();
+        return view('index',compact('products','product'));
     }
 
 // categories
@@ -32,8 +33,7 @@ class MainController extends Controller
     }
     public function category($code){
         $category = Category::where('code',$code)->first();
-        $products = Product::where('category_id',$category->id)->get();
-
+        $products = Product::where('category_id',$category->id)->latest()->get();
         return view('category',compact('category','products'));
     }
 

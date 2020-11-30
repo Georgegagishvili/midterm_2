@@ -101,7 +101,8 @@
 .card-description{
   font-family: "Poppins";
   font-size:17px;
-  overflow: hidden;
+  overflow:hidden;
+  white-space: pre-wrap;
   color:white;
   transition: 0.5s;
 }

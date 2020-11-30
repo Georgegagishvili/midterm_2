@@ -12,5 +12,4 @@
         @foreach($products as $product)
             @include('card', ['category' => $category])
         @endforeach
-    </div>
 @endsection

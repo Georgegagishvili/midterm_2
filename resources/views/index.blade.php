@@ -2,7 +2,7 @@
 @section('content')
   <div class = 'header'>
     <div class ='header-title'>
-      <p>ALL PRODUCTS {{$products->count()}}</p>
+      <p>ALL PRODUCTS {{$product}}</p>
     </div>
     <form method="GET" action="{{route('index')}}" autocomplete="off">
       <div class = 'header-filters'>

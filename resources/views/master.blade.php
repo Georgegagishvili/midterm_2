@@ -107,12 +107,18 @@
   </nav>
 
 <div class="container">
-        @if(session()->has('success'))
-            <p class = 'alert alert-success'>{{session()->get('success')}}</p>
-        @elseif(session()->has('warning'))
-            <p class = 'alert alert-warning'>{{session()->get('warning')}}</p>
-        @endif
         @yield('content')
+          <div class = 'header'>
+            @if(session()->has('success'))
+          <div class ='header-title alert alert-success'>
+            <p style = 'font-size:25px; border:none'>{{session()->get('success')}}</p>
+          </div>
+        @elseif(session()->has('warning'))
+          <div class ='header-title alert alert-warning'>
+            <p style = 'font-size:25px; border:none'>{{session()->get('warning')}}</p>
+          </div>
+        @endif
+  </div>
 </div>
 </body>
 </html>

@@ -14,7 +14,7 @@
           <p class = 'card-category-name'>{{$product->getCategory()->name}}</p>
           <h2>{{$product->name}}</h2>
           <span>{{$product->price}} $</span>
-          <p class = 'card-description'>{{$product->description}}</p>
+          <pre class = 'card-description'>{{$product->description}}</pre>
         </div>
       </div>
     </div>

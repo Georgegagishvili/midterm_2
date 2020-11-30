@@ -13,7 +13,7 @@
             <p class = 'product_category_name'>{{$product->getCategory()->name}}</p>
             <span class = 'product_product_name'>{{$product->name}}</span>
             <p class = 'product_description'>Product Description:</p>
-            <p class = 'product_description_text'>{{$product->description}}</p>
+            <pre class = 'product_description_text'>{{$product->description}}</pre>
             <p class = 'product_price'>{{$product->price}}$</p>
             <form action="{{route('cart-add',$product)}}" method="POST">
                 @csrf

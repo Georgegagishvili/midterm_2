@@ -53,6 +53,12 @@
 	color:white;
 	font-family: "Poppins";
 	font-size: 26px;
+	transition: 0.3s;
+}
+.category-wrapper a:hover{
+	color:#fed700;
+	transition: 0.3s;
+
 }
 .category-right{
 	overflow: hidden;
@@ -60,8 +66,10 @@
 }
 
 .category-wrapper p{
-	padding: 15px;
+	padding: 12px;
 	color:white;
+	font-family: inherit;
+	font-weight: 500;
 	transition: 1s;
 }
 .category-wrapper img{

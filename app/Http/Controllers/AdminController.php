@@ -92,6 +92,7 @@ class AdminController extends Controller
             }
         Category::where("id",$request->input("id"))->update([
             "name"=>$request->input("name"),
+            "code"=>$request->input('code'),
             "description"=>$request->input("description"),
             "image"=>$image_url,
 
@@ -184,6 +185,7 @@ class AdminController extends Controller
             "category_id"=>$request->input("category_id"),
             "name"=>$request->input("name"),
             "price"=>$request->input("price"),
+            "code"=>$request->input('code'),
             "description"=>$request->input("description"),
             "image"=>$image_url,
 
